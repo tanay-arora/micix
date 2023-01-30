@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980311059226",
+    "project_id": "micix-7b76c",
+    "storage_bucket": "micix-7b76c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980311059226:android:0b040dce5ba4b573185aa3",
+        "android_client_info": {
+          "package_name": "com.example.micix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980311059226-oasc80rjlctfi1pljdtelug4cq6gudq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD2vgxfBlHCkbTwC5z0dryXDAFw8InNZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980311059226-oasc80rjlctfi1pljdtelug4cq6gudq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
