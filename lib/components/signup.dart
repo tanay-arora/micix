@@ -1,8 +1,10 @@
+import 'package:Micix/components/after-login.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:micix/components/home.dart';
+import 'package:Micix/components/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:Micix/components/navigation.dart';
 import 'functions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -251,7 +253,7 @@ class _SignUpPageState extends State<SingUpPage> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              HomePage()))
+                                                              AfterLoginScreen()))
                                                 });
                                       } else {
                                         ScaffoldMessenger.of(context)
@@ -330,15 +332,15 @@ class _SignUpPageState extends State<SingUpPage> {
                                       ],
                                     ),
                                     onPressed: () async {
-                                      User? user =
-                                          await Authentication.signInWithGoogle(
+                                      User? user = await Authentication
+                                              .signInWithGoogle(
                                                   context: context)
-                                              .then((value) =>
-                                                  Navigator.pushReplacement(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              HomePage())));
+                                          .then((value) =>
+                                              Navigator.pushReplacement(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          AfterLoginScreen())));
                                     },
                                   ),
                                 )

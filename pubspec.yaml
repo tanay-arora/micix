@@ -1,4 +1,4 @@
-name: micix
+name: Micix
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -32,18 +32,26 @@ environment:
 dependencies:
   firebase_auth: 4.2.5
   firebase_core: 2.4.1
+  flutter_launcher_icons: ^0.11.0
   cloud_firestore: 4.3.1
   collection: 1.16.0
   google_sign_in: ^5.0.0
   font_awesome_flutter: 10.3.0
+  flutter_svg: 1.1.6
+  palette_generator: ^0.3.3+2
+  google_fonts: 4.0.1
+  cupertino_icons: 1.0.5
+  intl: ^0.17.0
+  http: ^0.13.1
+  url_launcher: ^6.0.2
+  flutter_html: any
   flutter:
     sdk: flutter
-
+    
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  intl: ^0.17.0
+  
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +77,11 @@ flutter:
     - assets/img/logo.webp
     - assets/img/google.webp
     - assets/img/logo_2.webp
+    - assets/img/banner.jpg
+    - assets/img/order_done.webp
+    - assets/icons/
+    - assets/img/next.webp
+    - assets/img/avt.webp
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -91,6 +104,12 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+fonts:
+  - family: SansPro
+    fonts:
+      - asset: assets/font/Source_Sans_Pro/SourceSansPro-Regular.ttf
+      - asset: assets/font/Source_Sans_Pro/SourceSansPro-Bold.ttf
+        weight: 700
   # fonts:
   #   - family: Schyler
   #     fonts:

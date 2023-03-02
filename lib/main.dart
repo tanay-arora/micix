@@ -1,11 +1,17 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:micix/components/home.dart';
-import 'package:micix/components/login.dart';
-import 'package:micix/components/signup.dart';
+import 'package:Micix/components/cart.dart';
+import 'package:Micix/components/checkout.dart';
+import 'package:Micix/components/detail.dart';
+import 'package:Micix/components/home.dart';
+import 'package:Micix/components/login.dart';
+import 'package:Micix/components/navigation.dart';
+import 'package:Micix/components/order_done.dart';
+import 'package:Micix/components/signup.dart';
 import 'components/onboarding.dart';
 import 'components/selectlogin.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,35 +31,15 @@ class MyApp extends StatelessWidget {
       // Initialize FlutterFire
       future: Firebase.initializeApp(),
       builder: (context, snapshot) {
-        // Check for errors
-        if (snapshot.hasError) {
-          print(snapshot);
-        }
-
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
             home: (FirebaseAuth.instance.currentUser != null)
-                ? HomePage()
+                ? navigation()
                 : OnboardingScreen(),
           );
-        }
-
-        // Otherwise, show something whilst waiting for initialization to complete
-
-        final auth = FirebaseAuth.instanceFor(
-            app: Firebase.app(), persistence: Persistence.NONE);
-        _changePersistence(auth);
-        FirebaseAuth.instance.authStateChanges().listen((User? user) {
-          if (user == null) {
-            print('User is currently signed out!');
-          } else {
-            print('User is signed in!');
-            print(user);
-          }
-        });
-
-        return HomePage();
+        } else
+          return CircularProgressIndicator();
       },
     );
   }

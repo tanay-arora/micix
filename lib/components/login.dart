@@ -1,7 +1,9 @@
+import 'package:Micix/components/after-login.dart';
 import 'package:flutter/material.dart';
-import 'package:micix/components/home.dart';
-import 'package:micix/components/onboarding.dart';
-import 'package:micix/components/selectlogin.dart';
+import 'package:Micix/components/home.dart';
+import 'package:Micix/components/navigation.dart';
+import 'package:Micix/components/onboarding.dart';
+import 'package:Micix/components/selectlogin.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'functions.dart';
@@ -174,7 +176,7 @@ class _LoginPageState extends State<LoginPage> {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    HomePage()));
+                                                    AfterLoginScreen()));
                                       } else {
                                         // Show an error message
                                         ScaffoldMessenger.of(context)
@@ -272,7 +274,7 @@ class _LoginPageState extends State<LoginPage> {
                           .then((value) => Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomePage())));
+                                  builder: (context) => AfterLoginScreen())));
                     },
                   ),
                 )

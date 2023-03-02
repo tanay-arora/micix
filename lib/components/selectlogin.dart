@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:micix/components/login.dart';
-import 'package:micix/components/signup.dart';
+import 'package:Micix/components/login.dart';
+import 'package:Micix/components/signup.dart';
 
 class LoginSignupPage extends StatefulWidget {
   @override
