@@ -7,4 +7,10 @@ workflows:
       - build/app/outputs/flutter-apk/app-release.apk
   ios-ipa:
     name: Build Ios IPA
-      - flutter build ipa --no-codesign
+    scripts: 
+      - flutter clean
+      - flutter build ios --release --no-codesign
+      - cd ios
+      - zip -r app.zip Runner.app
+      - codemagic-artifacts publish app.zip --type ios
+      
