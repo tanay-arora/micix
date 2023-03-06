@@ -2,4 +2,7 @@ workflows:
   android-apk:
     name: Build Android APK
     scripts:
-      - flutter build apk --debug --no-tree-shake-icons --no-shrink --no-obfuscate --split-per-abi
+      - flutter build apk --no-sound-null-safety
+  ios-ipa:
+    name: Build Ios IPA
+      - flutter build ipa --no-codesign
