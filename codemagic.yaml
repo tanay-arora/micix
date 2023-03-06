@@ -1,9 +1,5 @@
 workflows:
-    android-workflow-id:
-        name: Android Sample Workflow
-        # .......    
-        # .......
-        # .......  
-    ios-workflow-id:
-        name: iOS Sample Workflow
-        # ......
+  android-apk:
+    name: Build Android APK
+    scripts:
+      - flutter build apk --debug --no-tree-shake-icons --no-shrink --no-obfuscate --split-per-abi
