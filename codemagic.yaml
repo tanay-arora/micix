@@ -3,6 +3,8 @@ workflows:
     name: Build Android APK
     scripts:
       - flutter build apk
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
   ios-ipa:
     name: Build Ios IPA
       - flutter build ipa --no-codesign
