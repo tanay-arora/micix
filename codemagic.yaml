@@ -11,5 +11,5 @@ workflows:
       - flutter clean
       - flutter build ipa --release --no-codesign
     artifacts:
-      - build/ios/iphoneos/app-release.apk
+      - build/ios/iphoneos/app-release.ipa
       
