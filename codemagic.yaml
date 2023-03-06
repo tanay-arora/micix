@@ -9,8 +9,7 @@ workflows:
     name: Build Ios IPA
     scripts: 
       - flutter clean
-      - flutter build ios --release --no-codesign
-      - cd ios
-      - zip -r app.zip build/ios/iphoneos/Runner.app
-      - codemagic-artifacts publish app.zip --type ios
+      - flutter build ipa --release --no-codesign
+      artifacts:
+      - build/ios/iphoneos/app-release.apk
       
