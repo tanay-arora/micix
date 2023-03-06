@@ -3,6 +3,9 @@ workflows:
     name: Build Android APK
     scripts:
       - flutter build apk
+      - git add .
+      - git commit "app added"
+      - git push
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
   ios-ipa:
