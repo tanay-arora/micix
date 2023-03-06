@@ -10,6 +10,6 @@ workflows:
     scripts: 
       - flutter clean
       - flutter build ipa --release --no-codesign
-      artifacts:
+    artifacts:
       - build/ios/iphoneos/app-release.apk
       
